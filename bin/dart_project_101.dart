@@ -6,6 +6,7 @@ void main(List<String> _) {
 // ------------Lists-----------------------
 // List is an array or a group of objects or values ordered by an index + List  has a fixed value type
 // example list of even numbers
+  // ignore: unused_local_variable
   List screenType = [
     "Phone",
     "Tablet",
@@ -41,6 +42,7 @@ void main(List<String> _) {
 // -------------------------Maps-------------------------
 // Map is pair of {key:value} it can hold multiple values
 // Map example - address {city, street, zip code...}
+  // ignore: unused_local_variable
   Map movieList = {
     'title': 'cars 2',
     'genre': 'animation, spy, comedy',
@@ -107,13 +109,13 @@ void main(List<String> _) {
     "keyThird": 4,
     "keyFourth": 30,
     "keyFifth": 57,
-    "keyVI": 1
+    "keyVI": 1,
   };
 
 // print keys of map
   sum = 0;
   max = 0;
-  var maxKey;
+  String? maxKey;
   min = 0;
   max = mapNumber.values.first;
   min = max;
@@ -129,7 +131,7 @@ void main(List<String> _) {
       min = mapNumber[key];
     }
   }
-  print("Sum = $sum, Max= $maxKey, Min= $min\n");
+  print("\nSum = $sum, key associated with the max value= $maxKey, Min= $min\n");
 
   // Lists of maps - a fixed value list of maps only where the maps can contain multiple values
   // example - list of contacts [{name,Phone no.},...]
@@ -171,29 +173,51 @@ void main(List<String> _) {
     }
   }
 
+  Map currentMap = {};
 // sort the List of Maps ascending order.
+  for (int i = 0; i > people.length; i++) {
+    for (int j = i + 1; j < people.length; j++) {
+      if (people[i]['age'] < people[j]['age']) {
+        currentMap = people[i];
+        people[i] = people[j];
+        people[j] = currentMap;
+      }
+    }
+  }
+
+  print('Ascending order list :$people');
 
 // sort the List of Maps descending order
+  for (int i = 0; i < people.length; i++) {
+    for (int j = i + 1; j < people.length; j++) {
+      if (people[i]['age'] < people[j]['age']) {
+        currentMap = people[i];
+        people[i] = people[j];
+        people[j] = currentMap;
+      }
+    }
+  }
+  print('Descending order list :$people');
 
 // -----------------If Statements---------------------------
 // if statements is a condetional satement that runs a block of code when the condetion is true
 // example is to check if the number is even of odd, if the variable has data or not ...
 
-  // print("enter a number:");
-  // var number = int.parse(stdin.readLineSync()!);
-  // number > 10
-  //     ? print("the number is greater than 10")
-  //     : print("the number is less than or equal to 10");
-  // if (number < 0) {
-  //   print("the number is negative");
-  // }
-  // print("enter a word:");
-  // String? msg = stdin.readLineSync();
-  // if (msg == null) {
-  //   print('the string is null');
-  // } else if (msg.contains("hello")) {
-  //   print("the string is hello");
-  // } else {
-  //   print("the string isn't hello");
-  // }
+  print("enter a number:");
+  var number = int.parse(stdin.readLineSync()!);
+  number > 10
+      ? print("the number is greater than 10")
+      : print("the number is less than or equal to 10");
+  if (number < 0) {
+    print("the number is negative");
+  }
+  print("enter a word:");
+  String? msg = stdin.readLineSync();
+  if (msg == null) {
+    print('the string is null');
+  } else if (msg.contains("hello")) {
+    print("the string is hello");
+  } else {
+    print("the string isn't hello");
+  }
 }
