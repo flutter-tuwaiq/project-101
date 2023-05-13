@@ -36,7 +36,14 @@ void main() {
         minimum = number;
       }
     }
-    print('The maximum is $maximum and the minimum is $minimum.');
+
+    String maximumKey =
+        mapNumber.keys.firstWhere((key) => maximum == mapNumber[key]);
+
+    String minimumKey =
+        mapNumber.keys.firstWhere((key) => minimum == mapNumber[key]);
+
+    print('The maximum is $maximumKey and the minimum is $minimumKey.');
   } else {
     print("The map is empty!");
   }

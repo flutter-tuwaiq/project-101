@@ -1,5 +1,10 @@
 void main() {
   print("--------------- Maps part 1 ---------------");
+  /*
+  What is a Map in Dart?
+
+A way of representing and storing data that uses keys to retrieve the values from the list.
+  */
   Map userInfo = {
     "Username": "Ahmad1419",
     "Password": "qwer1234",

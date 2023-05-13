@@ -1,6 +1,10 @@
 void main() {
   print("--------------- Lists part 1 ---------------");
+/*
+What is a List in Dart?
 
+A way of representing and storing data that uses index to retrieve the values from the list.
+*/
   List days = [
     "sunday",
     "monday",

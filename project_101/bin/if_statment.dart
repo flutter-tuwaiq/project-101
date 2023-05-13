@@ -1,5 +1,10 @@
 void main() {
   print("--------------- if statments part 1 ---------------");
+/*
+What is an if statement in Dart?
+
+A way of taking a decision in programming languages to control the behaviour of the program.
+*/
 
   int age = 17;
   if (age < 18) {

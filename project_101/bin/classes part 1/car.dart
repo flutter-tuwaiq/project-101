@@ -1,3 +1,9 @@
+/*
+What is a class in Dart?
+
+A blueprint of Attributes and Methods that you can make a copy off as an object.
+*/
+
 void main() {
   Car myCar = Car("hyundai", "sonata", "white", 2018, 220);
   myCar.printAll();

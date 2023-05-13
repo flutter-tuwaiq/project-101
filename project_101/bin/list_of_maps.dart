@@ -1,6 +1,10 @@
 void main() {
   print("--------------- List of Maps part 1 ---------------");
+/*
+What is a List of Maps in Dart?
 
+The same as any normal list but the only difference between them is that it only takes items of type Map.
+*/
   List<Map> users = [
     {"username": "Ahmad1419", "password": "qwer1234"},
     {"username": "Fahad_dart", "password": "asdf5678"},
