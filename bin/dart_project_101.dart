@@ -199,6 +199,13 @@ void main(List<String> _) {
   }
   print('Descending order list :$people');
 
+// ----------------Classes, Objects, and Factory Constructors---------------------
+// create a class named "Person" with properties for name and age. Then, create an object of the "Person" class and print out its properties.
+Person person = Person(name: "david",age: 27);
+print("First person _ Name: ${person.name}, Age: ${person.age}");
+Person person2 = Person.fromMap(Name: "Sam",age: 27);
+print("Second person _ Name:${person2.name} , Age: ${person2.age}");
+
 // -----------------If Statements---------------------------
 // if statements is a condetional satement that runs a block of code when the condetion is true
 // example is to check if the number is even of odd, if the variable has data or not ...
